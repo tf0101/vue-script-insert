@@ -21,6 +21,7 @@
 
 <script>
 export default {
+    name: 'VueScriptInsert',
     data(){
         return{
             css_style:{},
