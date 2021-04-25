@@ -3,13 +3,13 @@ Module to dynamically load external js into spa
 
 ## Setup
 ```
-npm install vue-script-insert
+$ npm install vue-script-insert
 ```
 
 ## Usage
 
 ### Vue.js
-```
+```Vue
 <script>
 import VueScriptInsert from 'vue-script-insert'
 
@@ -23,7 +23,8 @@ export default {
 ```
 
 ### Nuxt.js
-```
+
+```js
 //plugins/vue-script-insert.js
 
 import Vue from 'vue'
@@ -32,7 +33,7 @@ import VueScriptInsert from 'vue-script-insert/src/installer.js'
 Vue.use(VueScriptInsert)
 ```
 
-```
+```js
 //nuxt.config.js
 
 export default {
@@ -46,7 +47,7 @@ export default {
 It works by setting prop to the <VueScriptInsert> tag.
 The tag containing the script is passed to url, the id attribute of the html tag is passed to id, and the css style is passed to layout.
 
-```
+```html
 <VueScriptInsert :url="adv_url" :id="adv_id" :layout="adv_layout"></VueScriptInsert>
 ```
 
@@ -59,7 +60,7 @@ The tag containing the script is passed to url, the id attribute of the html tag
 
 ### Usage examples
 
-```
+```Vue
 //Vue
 
 <template>
@@ -87,7 +88,7 @@ export default {
 </script>
 ```
 
-```
+```Vue
 //Nuxt
 
 <template>
@@ -114,7 +115,7 @@ export default {
 Detailed layout can be specified by using ids in <style> tags.
 ※ At this point, you need to specify the layout of the iframe.
 
-```
+```css
 <style>
     #id iframe{
         ・・・
