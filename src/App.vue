@@ -16,7 +16,7 @@ export default {
   },
   data() {
     return {
-      adv_url_top:'',
+      adv_url_top:'<script>document.write("adv block");</scr'+'ipt>',
       adv_id_top:'toppage-topbanner',
 
       adv_layout:{
