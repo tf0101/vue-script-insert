@@ -35,9 +35,7 @@ export default {
     },
     mounted(){
         this.css_style=this.parse_layout(this.layout)
-        this.$nextTick(()=>{
-            this.create_advblock(this.id,this.url)
-        })
+        this.create_advblock(this.id,this.url)
     },
     methods:{
         parse_layout(layout){
@@ -51,10 +49,9 @@ export default {
             var iframe = document.createElement('iframe')
             adv_point.appendChild(iframe)
 
-            var html = url
             var iframeDocument = iframe.contentWindow.document
             iframeDocument.open()
-            iframeDocument.write(html)
+            iframeDocument.write(url)
             iframeDocument.close()
             return iframeDocument
         },
