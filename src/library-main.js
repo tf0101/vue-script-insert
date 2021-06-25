@@ -1,11 +1,15 @@
-import component from './components/VueScriptInsert.vue';
+import VueScriptInsert from './components/VueScriptInsert.vue'
+import OverlayAdvTop from './components/OverlayAdvTop.vue'
+import OverlayAdvBottom from './components/OverlayAdvBottom.vue'
 
 
 // Vue.use() によって実行される install 関数を定義
 export function install(Vue) {
     if (install.installed) return;
     install.installed = true;
-    Vue.component('VueScriptInsert', component);
+    Vue.component("VueScriptInsert",VueScriptInsert)
+    Vue.component("OverlayAdvTop",OverlayAdvTop)
+    Vue.component("OverlayAdvBottom",OverlayAdvBottom)
 }
 
 // Vue.use() のためのモジュール定義を作成
@@ -27,4 +31,4 @@ if (GlobalVue) {
 
 
 // (npm/webpack 等で) モジュールとして利用させるためコンポーネントを export する
-export default component;
+export {VueScriptInsert,OverlayAdvTop,OverlayAdvBottom}

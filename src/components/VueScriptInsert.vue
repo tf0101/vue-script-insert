@@ -1,10 +1,10 @@
 <template>
-<div :id="this.id" :style="styles" class="adv-block-layout">
+<div :id="this.id" :style="styles" class="vuescriptinsert-adv-block-defalt">
 </div>
 </template>
 
 <style>
-.adv-block-layout iframe{
+.vuescriptinsert-adv-block-defalt iframe{
     /*default layout*/
     display: block;
     margin: 0 auto;
