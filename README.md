@@ -11,7 +11,7 @@ $ npm install vue-script-insert
 ### Vue.js
 ```Vue
 <script>
-import VueScriptInsert from 'vue-script-insert'
+import {VueScriptInsert} from 'vue-script-insert'
 
 export default {
   components: {
@@ -28,7 +28,7 @@ export default {
 //plugins/vue-script-insert.js
 
 import Vue from 'vue'
-import VueScriptInsert from 'vue-script-insert/src/installer.js'
+import {VueScriptInsert} from 'vue-script-insert/src/installer.js'
 
 Vue.use(VueScriptInsert)
 ```
@@ -68,7 +68,7 @@ The tag containing the script is passed to url, the id attribute of the html tag
 </template>
 
 <script>
-import VueScriptInsert from 'vue-script-insert'
+import {VueScriptInsert} from 'vue-script-insert'
 
 export default {
     components: {
