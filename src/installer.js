@@ -1,8 +1,19 @@
-import MyComponent from './components/VueScriptInsert.vue'
+import VueScriptInsert from './components/VueScriptInsert.vue'
+import OverlayAdvTop from './components/OverlayAdvTop.vue'
+import OverlayAdvBottom from './components/OverlayAdvBottom.vue'
 
 // Vue.use() によって実行される install 関数を定義
-MyComponent.install = function (Vue) {
-  Vue.component( MyComponent.name, MyComponent )
+VueScriptInsert.install = function (Vue) {
+  Vue.component( VueScriptInsert.name, VueScriptInsert)
 }
 
-export default MyComponent
+OverlayAdvTop.install = function (Vue) {
+  Vue.component( OverlayAdvTop.name, OverlayAdvTop)
+}
+
+OverlayAdvBottom.install = function (Vue) {
+  Vue.component( OverlayAdvBottom.name, OverlayAdvBottom)
+}
+
+
+export {VueScriptInsert,OverlayAdvTop,OverlayAdvBottom}
