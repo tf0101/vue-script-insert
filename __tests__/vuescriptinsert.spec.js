@@ -20,7 +20,7 @@ describe('AdvBlock', () => {
       attachTo: document.body
     })
 
-    expect(wrapper.html()).toBe('<div id="toppage-topbanner" class="adv-block-layout"><iframe></iframe></div>')
+    expect(wrapper.html()).toBe('<div id="toppage-topbanner" class="vuescriptinsert-adv-block-defalt"><iframe></iframe></div>')
   })
   
 })
