@@ -1,0 +1,25 @@
+name: test
+on: 
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Use Node.js And Setup .npmrc
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope       : 'tf0101'
+          always-auth : true
+      - name: Install
+        run : npm install
+      - name: Test
+        run : npm test
