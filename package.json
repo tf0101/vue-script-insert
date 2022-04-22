@@ -1,6 +1,6 @@
 {
   "name": "vue-script-insert",
-  "version": "0.4.2",
+  "version": "0.4.3",
   "private": false,
   "main": "./dist/vue-script-insert.common.js",
   "unpkg": "./dist/vue-script-insert.umd.min.js",
