@@ -1,0 +1,37 @@
+name: release
+on: 
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Use Node.js And Setup .npmrc
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.x'
+          registry-url: 'https://registry.npmjs.org'
+          scope       : 'tf0101'
+          always-auth : true
+        env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Can Publish
+        run : npx can-npm-publish --verbose
+        env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Install
+        run : npm install
+        env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Build
+        run : npm run build-bundle
+        env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
+      - name: Publish
+        run : npm publish
+        env :
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
